@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //conditional stmts=> if-else if ,switch- case
+        let stmt ="hai";
+        if(typeof stmt =="string"){
+            stmt+=" in javascript" //+ to concordinate
+            console.log(stmt);
+        }
+    
+        else if(typeof stmt=="number"){
+            let result = stmt - 24;
+            console.log(result);
+        }
+
+        else if (typeof stmt=="boolean"){
+            console.log(stmt);
+        }
+
+
+        else{
+            console.log(stmt,"is not a string")
+        }
+        console.log("After if - else block")
+
+
+        let num1=50; let num2=30; let num3=100;
+        if(num1 >num2 && num1> num3){
+            console.log(num1, "is the largest")
+        }
+        else if(num2 >num1 && num2> num3){
+           console.log(num2, "is the largest")}
+
+        else{
+            console.log(num3, "is the largest")
+        }
+
+    
+
+
+        let operator="*"
+        let i=10; let j=20;
+        switch(operator)
+        {
+            
+            case "+":{
+                let s=i+j
+                document.write(s);
+                break
+
+            }
+             
+            case "-":{
+                let s=i-j
+                document.write(s);
+                break;
+            }
+
+            case "*": 
+            {
+                
+                document.write(i*j);
+                break;
+
+            }
+            default:
+            document.write("invalid");
+                break;
+                
+            
+
+        }
+
+
+        
+
+
+    </script>
+</body>
+</html>

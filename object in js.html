@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student =
+        {
+            Rollnumber: 1,
+            Name: "Amal",
+            Age: 15,
+            marks:[85,97,91,90],
+            sum:function(){
+                let result=this.marks.reduce((x,y)=>{
+                    return x+y
+                })
+                console.log("total marks= ",result);
+                
+            }
+            
+
+
+        }
+        console.log(student);
+        console.log(student.Name);
+        student.sum()
+        console.log(student["Rollnumber"]);
+        student.batch="Mean stack"
+        console.log(student);
+    </script>
+</body>
+</html>

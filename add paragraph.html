@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="create()">click to add</button>
+    <button onclick="remove()">click to remove</button>
+
+    <div id="mydiv">
+
+    </div>
+    <script>
+        
+        let para = document.createElement("p")
+        
+        function create() 
+        {
+            
+            para.innerText = "this is a dynamically added paragraph"
+            para.id = "p1"
+            document.getElementById("mydiv").appendChild(para)
+        }
+
+
+        function remove()
+        {
+            para.remove()
+        } 
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(i=2; i<=20; i+=2){
+            document.write(i ) ;
+            if(i==16){
+                break;
+            }
+        }
+        console.log("*******************")
+        
+        let count=0
+        while (count<5){
+            count +=1;
+            if(count ==2)
+            continue;
+            console.log("hello",count)
+        }
+
+
+        document.write("outside the loop");
+
+        let k=10;
+          do{
+              console.log("hello world",k);
+              k--;
+
+          }while(k>5)
+
+    </script>
+</body>
+</html>

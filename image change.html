@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="Fox.jpg" onclick="flip()" id="image" alt="" width="150px"  height="150px">
+
+
+
+    <script>
+        function flip(){
+            console.log(document.getElementById("image").src);
+            if(document.getElementById("image").src="file:///B:/Javascript/Fox.jpg"){
+                document.getElementById("image").src="file:///B:/Javascript/Owl.jpg"
+
+            }
+            else{
+                document.getElementById("image").src="file:///B:/Javascript/Fox.jpg"
+                
+
+
+            }
+           
+        }
+    </script>
+
+
+</body>
+
+</html>

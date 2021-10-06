@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" class="form-control" id="pid" placeholder="enter product id here:">
+    </div>
+    <div>
+        <input type="text" class="form-control" id="name" placeholder="enter product name:">
+    </div>
+    <div>
+        <input type="text" class="form-control" id="price" placeholder="enter product price:">
+    </div>
+
+    <button class="btn btn-primary" id="btn" onclick="productDetails()">Add product</button>
+    <button id="viewbtn" onclick="viewDetails()">View</button>
+
+    <div id="display">
+
+    </div>
+
+
+    <script>
+        
+        let product_list=[]
+        
+        
+
+        function productDetails(){
+        let productid=document.getElementById("pid").value
+        let productname=document.getElementById("name").value
+        let productprice=document.getElementById("price").value
+        let product={pid:productid,name:productname,price:productprice} //object
+
+        product_list.push(product)
+        document.getElementById("pid").value=""
+        document.getElementById("name").value=""
+        document.getElementById("price").value=""
+
+        console.log(product_list);
+
+        let s=JSON.stringify(product)      //object to string
+        console.log(s, typeof s);
+        let p=JSON.parse(s)          //string to object
+        console.log(p);
+
+        }
+
+
+        function viewDetails(){
+            
+            let content=""
+            product_list.forEach(product=>{
+                content+=`<h4>${product.name},${product.price}</h4>`
+            }
+            )
+            document.getElementById("display").innerHTML=content
+        }
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

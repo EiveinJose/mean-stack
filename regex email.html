@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="mailid">
+    <input type="button" value="check" onclick="checkEmail()">
+
+
+
+    <script>
+        function checkEmail() {
+            let regex = /^[a-z]+\W*@(gmail.com|yahoo.in)$/g   //can give [a-z] or /w+    ***dont use space***
+            let mail = document.getElementById("mailid").value
+
+            if (regex.test(mail)) {
+                alert("it's a valid email id")
+            } else {
+                alert("it's an invalid email id")
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
